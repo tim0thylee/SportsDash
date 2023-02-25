@@ -1,26 +1,34 @@
 
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import './App.css';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid'
 import TeamAutoComplete from './components/TeamAutoComplete';
 import OddsDiplay from './components/OddsDisplay';
-import oddsApi from './api/odds';
+import PlayerTable from './components/PlayerTable'
+
 
 function App() {
-  // console.log(oddsApi("nba"))
   const [leftTeam, setLeftTeam] = useState("")
   const [rightTeam, setRightTeam] = useState("")
 
   return (
     <div className="App">
-      <Container maxWidth="lg">
-        <Grid container spacing={5}>
-          {leftTeam} 
-          <TeamAutoComplete team={leftTeam} setTeam={setLeftTeam}/>
-          <OddsDiplay/>
-          {rightTeam} 
-          <TeamAutoComplete team={rightTeam} setTeam={setRightTeam}/>
+      <Container maxWidth={false}>
+        <Grid container spacing={1}>
+          <Grid item md={5}>
+            {leftTeam} 
+            <TeamAutoComplete team={leftTeam} setTeam={setLeftTeam}/>
+            <PlayerTable/>
+          </Grid>
+          <Grid item md={2}>
+            <OddsDiplay leftTeam={leftTeam} rightTeam={rightTeam}/>
+          </Grid>
+          <Grid item md={5}>
+            {rightTeam}
+            <TeamAutoComplete team={rightTeam} setTeam={setRightTeam}/>
+            <PlayerTable/> 
+          </Grid>
         </Grid>
       </Container>
     </div>
