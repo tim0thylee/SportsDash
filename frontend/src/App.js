@@ -9,8 +9,8 @@ import PlayerTable from './components/PlayerTable'
 
 
 function App() {
-  const [leftTeam, setLeftTeam] = useState("")
-  const [rightTeam, setRightTeam] = useState("")
+  const [leftTeam, setLeftTeam] = useState("Philadelpha 76ers")
+  const [rightTeam, setRightTeam] = useState("Miami Heat")
 
   return (
     <div className="App">
