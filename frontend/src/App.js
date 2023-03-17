@@ -6,6 +6,7 @@ import Grid from '@mui/material/Grid'
 import TeamAutoComplete from './components/TeamAutoComplete';
 import OddsDiplay from './components/OddsDisplay';
 import PlayerTable from './components/PlayerTable'
+import PlayerInjuryDisplay from './components/PlayerInjuryDisplay';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             {leftTeam} 
             <TeamAutoComplete team={leftTeam} setTeam={setLeftTeam}/>
             <PlayerTable/>
+            <PlayerInjuryDisplay team={leftTeam}/>
           </Grid>
           <Grid item md={2}>
             <OddsDiplay leftTeam={leftTeam} rightTeam={rightTeam}/>
@@ -27,7 +29,8 @@ function App() {
           <Grid item md={5}>
             {rightTeam}
             <TeamAutoComplete team={rightTeam} setTeam={setRightTeam}/>
-            <PlayerTable/> 
+            <PlayerTable/>
+            <PlayerInjuryDisplay team={rightTeam}/> 
           </Grid>
         </Grid>
       </Container>

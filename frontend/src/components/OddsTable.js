@@ -20,6 +20,7 @@ function OddsTable({leftTeam, rightTeam, odds}) {
         </TableHead>
         <TableBody>
             {odds.bookmakers.map((odd) => {
+                // below is to show the right odds are shown on the right team. 
                 const firstTeam =  odd.markets[0].outcomes[0]
                 const secondTeam = odd.markets[0].outcomes[1]
 

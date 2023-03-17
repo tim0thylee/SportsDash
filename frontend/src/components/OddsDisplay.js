@@ -2,6 +2,8 @@ import {useState, useEffect} from 'react'
 import OddsTable from './OddsTable'
 import oddsApi from '../api/odds'
 
+const debug = true
+
 const SAMPLE_DATA = [
     {
         away_team: "Detroit Pistons",
@@ -106,8 +108,7 @@ const OddsDiplay = ({rightTeam, leftTeam}) => {
     useEffect(() => {
         // Call the data and store in odds. 
         const callData= async () => {
-            // const oddsData = await oddsApi()
-            const oddsData = SAMPLE_DATA
+            const oddsData = debug ? SAMPLE_DATA : await oddsApi()
 
             setOdds(oddsData)
             const temp = {}
