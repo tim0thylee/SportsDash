@@ -1,0 +1,88 @@
+2023-03-29 00:25:13 [scrapy] DEBUG: Crawled (200) <GET https://www.teamrankings.com/robots.txt> (referer: None)
+2023-03-29 00:25:13 [scrapy] DEBUG: Crawled (200) <GET https://www.teamrankings.com/nba/stat/turnovers-per-game> (referer: None)
+2023-03-29 00:25:14 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/turnovers-per-game>
+{'rank': '1', 'team_name': 'Toronto', 'total_tos': '11.8', 'last_three_tos': '11.0', 'last_tos': '9.0', 'home_tos': '11.7', 'away_tos': '12.0'}
+2023-03-29 00:25:14 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/turnovers-per-game>
+{'rank': '2', 'team_name': 'Dallas', 'total_tos': '12.3', 'last_three_tos': '10.7', 'last_tos': '13.0', 'home_tos': '12.0', 'away_tos': '12.7'}
+2023-03-29 00:25:14 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/turnovers-per-game>
+{'rank': '3', 'team_name': 'Atlanta', 'total_tos': '12.8', 'last_three_tos': '12.7', 'last_tos': '15.0', 'home_tos': '12.4', 'away_tos': '13.3'}
+2023-03-29 00:25:14 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/turnovers-per-game>
+{'rank': '4', 'team_name': 'New York', 'total_tos': '12.9', 'last_three_tos': '13.7', 'last_tos': '11.0', 'home_tos': '12.8', 'away_tos': '13.1'}
+2023-03-29 00:25:14 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/turnovers-per-game>
+{'rank': '5', 'team_name': 'Okla City', 'total_tos': '13.2', 'last_three_tos': '10.7', 'last_tos': '11.0', 'home_tos': '13.3', 'away_tos': '13.1'}
+2023-03-29 00:25:14 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/turnovers-per-game>
+{'rank': '6', 'team_name': 'Boston', 'total_tos': '13.4', 'last_three_tos': '14.0', 'last_tos': '12.0', 'home_tos': '13.6', 'away_tos': '13.1'}
+2023-03-29 00:25:14 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/turnovers-per-game>
+{'rank': '7', 'team_name': 'Cleveland', 'total_tos': '13.4', 'last_three_tos': '9.7', 'last_tos': '8.0', 'home_tos': '13.8', 'away_tos': '12.9'}
+2023-03-29 00:25:14 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/turnovers-per-game>
+{'rank': '8', 'team_name': 'Miami', 'total_tos': '13.6', 'last_three_tos': '13.3', 'last_tos': '16.0', 'home_tos': '13.2', 'away_tos': '14.0'}
+2023-03-29 00:25:14 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/turnovers-per-game>
+{'rank': '9', 'team_name': 'Philadelphia', 'total_tos': '13.6', 'last_three_tos': '11.3', 'last_tos': '11.0', 'home_tos': '13.5', 'away_tos': '13.7'}
+2023-03-29 00:25:14 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/turnovers-per-game>
+{'rank': '10', 'team_name': 'Memphis', 'total_tos': '13.6', 'last_three_tos': '13.0', 'last_tos': '17.0', 'home_tos': '12.9', 'away_tos': '14.3'}
+2023-03-29 00:25:14 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/turnovers-per-game>
+{'rank': '10', 'team_name': 'Sacramento', 'total_tos': '13.6', 'last_three_tos': '7.7', 'last_tos': '10.0', 'home_tos': '13.0', 'away_tos': '14.2'}
+2023-03-29 00:25:14 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/turnovers-per-game>
+{'rank': '12', 'team_name': 'Phoenix', 'total_tos': '13.8', 'last_three_tos': '9.0', 'last_tos': '7.0', 'home_tos': '13.5', 'away_tos': '14.0'}
+2023-03-29 00:25:14 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/turnovers-per-game>
+{'rank': '13', 'team_name': 'Chicago', 'total_tos': '13.8', 'last_three_tos': '13.7', 'last_tos': '15.0', 'home_tos': '14.2', 'away_tos': '13.4'}
+2023-03-29 00:25:14 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/turnovers-per-game>
+{'rank': '14', 'team_name': 'Brooklyn', 'total_tos': '13.9', 'last_three_tos': '13.0', 'last_tos': '15.0', 'home_tos': '13.9', 'away_tos': '13.9'}
+2023-03-29 00:25:14 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/turnovers-per-game>
+{'rank': '15', 'team_name': 'Charlotte', 'total_tos': '13.9', 'last_three_tos': '13.3', 'last_tos': '18.0', 'home_tos': '13.9', 'away_tos': '13.9'}
+2023-03-29 00:25:14 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/turnovers-per-game>
+{'rank': '16', 'team_name': 'Washington', 'total_tos': '14.1', 'last_three_tos': '13.0', 'last_tos': '11.0', 'home_tos': '14.3', 'away_tos': '13.9'}
+2023-03-29 00:25:14 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/turnovers-per-game>
+{'rank': '17', 'team_name': 'LA Lakers', 'total_tos': '14.2', 'last_three_tos': '14.7', 'last_tos': '18.0', 'home_tos': '13.1', 'away_tos': '15.3'}
+2023-03-29 00:25:14 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/turnovers-per-game>
+{'rank': '18', 'team_name': 'LA Clippers', 'total_tos': '14.3', 'last_three_tos': '17.7', 'last_tos': '18.0', 'home_tos': '14.9', 'away_tos': '13.6'}
+2023-03-29 00:25:14 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/turnovers-per-game>
+{'rank': '19', 'team_name': 'Portland', 'total_tos': '14.5', 'last_three_tos': '14.7', 'last_tos': '12.0', 'home_tos': '14.4', 'away_tos': '14.7'}
+2023-03-29 00:25:14 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/turnovers-per-game>
+{'rank': '19', 'team_name': 'Milwaukee', 'total_tos': '14.5', 'last_three_tos': '10.7', 'last_tos': '9.0', 'home_tos': '14.4', 'away_tos': '14.7'}
+2023-03-29 00:25:14 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/turnovers-per-game>
+{'rank': '19', 'team_name': 'Denver', 'total_tos': '14.5', 'last_three_tos': '11.3', 'last_tos': '12.0', 'home_tos': '14.2', 'away_tos': '14.9'}
+2023-03-29 00:25:14 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/turnovers-per-game>
+{'rank': '22', 'team_name': 'New Orleans', 'total_tos': '14.7', 'last_three_tos': '17.3', 'last_tos': '19.0', 'home_tos': '14.8', 'away_tos': '14.6'}
+2023-03-29 00:25:14 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/turnovers-per-game>
+{'rank': '23', 'team_name': 'Indiana', 'total_tos': '14.9', 'last_three_tos': '16.0', 'last_tos': '14.0', 'home_tos': '14.8', 'away_tos': '15.0'}
+2023-03-29 00:25:14 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/turnovers-per-game>
+{'rank': '24', 'team_name': 'Orlando', 'total_tos': '15.0', 'last_three_tos': '14.3', 'last_tos': '16.0', 'home_tos': '14.9', 'away_tos': '15.1'}
+2023-03-29 00:25:14 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/turnovers-per-game>
+{'rank': '25', 'team_name': 'Detroit', 'total_tos': '15.0', 'last_three_tos': '14.0', 'last_tos': '10.0', 'home_tos': '15.2', 'away_tos': '14.8'}
+2023-03-29 00:25:14 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/turnovers-per-game>
+{'rank': '26', 'team_name': 'Minnesota', 'total_tos': '15.4', 'last_three_tos': '11.3', 'last_tos': '6.0', 'home_tos': '15.5', 'away_tos': '15.2'}
+2023-03-29 00:25:14 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/turnovers-per-game>
+{'rank': '27', 'team_name': 'San Antonio', 'total_tos': '15.4', 'last_three_tos': '11.3', 'last_tos': '10.0', 'home_tos': '15.4', 'away_tos': '15.3'}
+2023-03-29 00:25:14 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/turnovers-per-game>
+{'rank': '28', 'team_name': 'Utah', 'total_tos': '15.4', 'last_three_tos': '13.7', 'last_tos': '13.0', 'home_tos': '15.7', 'away_tos': '15.1'}
+2023-03-29 00:25:14 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/turnovers-per-game>
+{'rank': '29', 'team_name': 'Golden State', 'total_tos': '16.3', 'last_three_tos': '15.3', 'last_tos': '19.0', 'home_tos': '15.8', 'away_tos': '16.7'}
+2023-03-29 00:25:14 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/turnovers-per-game>
+{'rank': '30', 'team_name': 'Houston', 'total_tos': '16.5', 'last_three_tos': '16.3', 'last_tos': '14.0', 'home_tos': '16.6', 'away_tos': '16.4'}
+2023-03-29 00:25:14 [scrapy] INFO: Closing spider (finished)
+2023-03-29 00:25:14 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 607,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 67112,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 2,
+ 'elapsed_time_seconds': 0.736398,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2023, 3, 29, 7, 25, 14, 92023),
+ 'httpcompression/response_bytes': 258016,
+ 'httpcompression/response_count': 2,
+ 'item_scraped_count': 30,
+ 'log_count/DEBUG': 32,
+ 'log_count/INFO': 7,
+ 'response_received_count': 2,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/200': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2023, 3, 29, 7, 25, 13, 355625)}
+2023-03-29 00:25:14 [scrapy] INFO: Spider closed (finished)
