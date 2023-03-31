@@ -8,12 +8,10 @@ import '@fontsource/roboto/700.css';
 const debug = true
 
 const PlayerInjuryDisplay = ({team, injuries}) => {
-    console.log(injuries)
     const showInjuries = () => {
         const curInjuredTeam = injuries.find(obj => {
             return obj.team_name === team
         })
-        console.log(curInjuredTeam)
 
         if (curInjuredTeam) {
             const players = curInjuredTeam.players
@@ -21,7 +19,7 @@ const PlayerInjuryDisplay = ({team, injuries}) => {
         } else {
             return( 
                 <div>
-                    <h3>This team has not injuries.</h3>
+                    <h3>This team has no injuries.</h3>
                 </div>
             )
         }
