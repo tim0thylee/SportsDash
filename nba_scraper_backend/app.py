@@ -94,6 +94,84 @@ def team_turnovers_scrape():
     response = requests.get('http://localhost:9080/crawl.json', params)
     data = json.loads(response.text)
     return data
+
+@app.route('/opp_assists')
+def opp_assists_scrape():
+    params = {
+        'spider_name':'opp_assists',
+        'start_requests': True,
+    }
+
+    response = requests.get('http://localhost:9080/crawl.json', params)
+    data = json.loads(response.text)
+    return data
+
+@app.route('/opp_blocks')
+def opp_blocks_scrape():
+    params = {
+        'spider_name':'opp_blocks',
+        'start_requests': True,
+    }
+
+    response = requests.get('http://localhost:9080/crawl.json', params)
+    data = json.loads(response.text)
+    return data
+
+@app.route('/opp_points')
+def opp_points_scrape():
+    params = {
+        'spider_name':'opp_points',
+        'start_requests': True,
+    }
+
+    response = requests.get('http://localhost:9080/crawl.json', params)
+    data = json.loads(response.text)
+    return data
+
+@app.route('/opp_rebounds')
+def opp_rebounds_scrape():
+    params = {
+        'spider_name':'opp_rebounds',
+        'start_requests': True,
+    }
+
+    response = requests.get('http://localhost:9080/crawl.json', params)
+    data = json.loads(response.text)
+    return data
+
+@app.route('/opp_steals')
+def opp_steals_scrape():
+    params = {
+        'spider_name':'opp_steals',
+        'start_requests': True,
+    }
+
+    response = requests.get('http://localhost:9080/crawl.json', params)
+    data = json.loads(response.text)
+    return data
+
+@app.route('/opp_threes')
+def opp_threes_scrape():
+    params = {
+        'spider_name':'opp_threes',
+        'start_requests': True,
+    }
+
+    response = requests.get('http://localhost:9080/crawl.json', params)
+    data = json.loads(response.text)
+    return data
+
+@app.route('/opp_turnovers')
+def opp_turnovers_scrape():
+    params = {
+        'spider_name':'opp_turnovers',
+        'start_requests': True,
+    }
+
+    response = requests.get('http://localhost:9080/crawl.json', params)
+    data = json.loads(response.text)
+    return data
+
        
 if __name__ == '__main__':
     app.run(debug=True, port=1234)
