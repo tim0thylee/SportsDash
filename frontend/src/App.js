@@ -11,6 +11,7 @@ import PlayerInjuryDisplay from './components/PlayerInjuryDisplay';
 import playerInjuryAPI from './api/playerInjury'
 import {INJURY_SAMPLE_DATA} from './api/SampleData'
 import { team_assists, team_points, team_rebounds, team_blocks, team_steals, team_threes, team_turnovers } from './api/teamStats';
+import { opp_assists, opp_points, opp_rebounds, opp_blocks, opp_steals, opp_threes, opp_turnovers } from './api/oppStats';
 import { arrayToObjTeam } from './utils/utils';
 
 import '@fontsource/roboto/300.css';
@@ -32,6 +33,13 @@ function App() {
   const [teamSteals, setTeamSteals] = useState({})
   const [teamTurnovers, setTeamTurnovers] = useState({})
   const [teamThrees, setTeamThrees] = useState({})
+  const [oppAssists, setOppAssists] = useState({})
+  const [oppPoints, setOppPoints] = useState({})
+  const [oppRebounds, setOppRebounds] = useState({})
+  const [oppBlocks, setOppBlocks] = useState({})
+  const [oppSteals, setOppSteals] = useState({})
+  const [oppTurnovers, setOppTurnovers] = useState({})
+  const [oppThrees, setOppThrees] = useState({})
 
   useEffect(() => {
     // Call the data and store in odds. We do this to save number of data calls. 
@@ -48,6 +56,13 @@ function App() {
     arrayToObjTeam(team_steals, setTeamSteals).catch(console.error)
     arrayToObjTeam(team_turnovers, setTeamTurnovers).catch(console.error)
     arrayToObjTeam(team_threes, setTeamThrees).catch(console.error)
+    arrayToObjTeam(opp_assists, setOppAssists).catch(console.error)
+    arrayToObjTeam(opp_points, setOppPoints).catch(console.error)
+    arrayToObjTeam(opp_rebounds, setOppRebounds).catch(console.error)
+    arrayToObjTeam(opp_blocks, setOppBlocks).catch(console.error)
+    arrayToObjTeam(opp_steals, setOppSteals).catch(console.error)
+    arrayToObjTeam(opp_turnovers, setOppTurnovers).catch(console.error)
+    arrayToObjTeam(opp_threes, setOppThrees).catch(console.error)
   }, [])
 
   return (
@@ -57,7 +72,8 @@ function App() {
           <Grid item md={5}>
             <h2>{leftTeam}</h2> 
             <TeamAutoComplete team={leftTeam} setTeam={setLeftTeam}/>
-            <TeamStatsDisplay 
+            <TeamStatsDisplay
+              title={"Team Stats"} 
               team = {leftTeam}
               assists = {teamAssists}
               points = {teamPoints}
@@ -67,6 +83,17 @@ function App() {
               turnovers = {teamTurnovers}
               threes = {teamThrees}
             />
+            <TeamStatsDisplay
+              title={"Opponent Stats"} 
+              team = {leftTeam}
+              assists = {oppAssists}
+              points = {oppPoints}
+              rebounds = {oppRebounds}
+              blocks = {oppBlocks}
+              steals = {oppSteals}
+              turnovers = {oppTurnovers}
+              threes = {oppThrees}
+            />
             <PlayerInjuryDisplay team={leftTeam} injuries={playersInjury} />
           </Grid>
           <Grid item md={2}>
@@ -75,7 +102,8 @@ function App() {
           <Grid item md={5}>
             <h2>{rightTeam}</h2>
             <TeamAutoComplete team={rightTeam} setTeam={setRightTeam}/>
-            <TeamStatsDisplay 
+            <TeamStatsDisplay
+              title={"Team Stats"}  
               team = {rightTeam}
               assists = {teamAssists}
               points = {teamPoints}
@@ -84,6 +112,17 @@ function App() {
               steals = {teamSteals}
               turnovers = {teamTurnovers}
               threes = {teamThrees}
+            />
+            <TeamStatsDisplay
+              title={"Opponent Stats"} 
+              team = {rightTeam}
+              assists = {oppAssists}
+              points = {oppPoints}
+              rebounds = {oppRebounds}
+              blocks = {oppBlocks}
+              steals = {oppSteals}
+              turnovers = {oppTurnovers}
+              threes = {oppThrees}
             />
             <PlayerInjuryDisplay team={rightTeam} injuries={playersInjury} /> 
           </Grid>
