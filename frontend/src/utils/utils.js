@@ -45,3 +45,14 @@ export const arrayToObjTeam = async (data, setState) => {
     
     setState(teamStatsObj)
 }
+
+export const arrayToObjNbaTeams = async (data, setState) => {
+    const teamNames = await data()
+    const teamNamesObj = {}
+
+    for (const team of teamNames.response) {
+        teamNamesObj[team.name] = team
+    }
+
+    setState(teamNamesObj)
+}
