@@ -123,7 +123,7 @@ const OddsDiplay = ({rightTeam, leftTeam}) => {
         
         callData().catch(console.error)
     }, [])
-    
+    console.log(odds)
     const showOdds = () => {
         // if the selected teams are playing, show the odds. 
         if (rightTeam != leftTeam){

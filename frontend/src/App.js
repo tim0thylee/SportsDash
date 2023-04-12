@@ -9,6 +9,7 @@ import OddsDiplay from './components/OddsDisplay';
 import TeamStatsDisplay from './components/TeamStatsDisplay'
 import PlayerInjuryDisplay from './components/PlayerInjuryDisplay';
 import LastGamesDisplay from './components/LastGamesDisplay'
+import Navbar from './components/Navbar'
 
 import playerInjuryAPI from './api/playerInjury'
 import {INJURY_SAMPLE_DATA} from './api/SampleData'
@@ -81,6 +82,7 @@ function App() {
   return (
     <div className="App">
       <Container maxWidth={false}>
+        <Navbar/>
         <Grid container spacing={1}>
           <Grid item md={5}>
             <h2>{leftTeam}</h2> 

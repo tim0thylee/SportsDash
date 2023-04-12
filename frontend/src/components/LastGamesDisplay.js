@@ -18,7 +18,6 @@ const TeamStatsTable = ({team, allTeamInfo}) => {
                 if (tenArray.length === 10){
                     break
                 }
-                console.log("status", fullGames[i].status.long)
                 if (fullGames[i].status.long !== "Not Started") {
                     tenArray.push(fullGames[i])
                 }
