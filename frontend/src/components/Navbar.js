@@ -21,7 +21,7 @@ import gamesToday from '../api/gamesToday';
 const pages = ['Home', 'Select Matchups', 'About'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
-function ResponsiveAppBar() {
+function ResponsiveAppBar({handleLeft, handleRight}) {
   const [anchorElNav, setAnchorElNav] =useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
   const [anchorMatchup, setAnchorMatchup] = useState(null)
@@ -31,6 +31,8 @@ function ResponsiveAppBar() {
     const getGames = async () => {
       let currentDate = moment().format("YYYY-MM-DD")
       let games = await gamesToday(currentDate)
+      //for testing when there are not games that day. 
+      // let games = await gamesToday("2023-04-12")
       setTodaysGames(games.response)
     }
     getGames().catch(console.error)
@@ -56,11 +58,13 @@ function ResponsiveAppBar() {
     setAnchorElUser(null)
   };
 
-  const handleCloseMatchup = () => {
+  const handleCloseMatchup = (game) => {
+    handleLeft(game.teams.away.name)
+    handleRight(game.teams.home.name)
     handleCloseNavMenu()
     setAnchorMatchup(null)
   }
-
+  console.log(todaysGames)
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
@@ -172,8 +176,12 @@ function ResponsiveAppBar() {
               open={Boolean(anchorMatchup)}
               onClose={handleCloseMatchup}
             >
-              {todaysGames.map((game) => (
-                <MenuItem key={game.id} onClick={handleCloseMatchup}>
+              {!todaysGames.length ? 
+                <MenuItem onClick={handleCloseMatchup}>
+                  <Typography textAlign="center">No Games Today</Typography>
+                </MenuItem> : 
+                todaysGames.map((game) => (
+                <MenuItem key={game.id} onClick={() => handleCloseMatchup(game)}>
                   <Typography textAlign="center">{game.teams.away.name} vs {game.teams.home.name}</Typography>
                 </MenuItem>
               ))}

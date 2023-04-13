@@ -82,7 +82,7 @@ function App() {
   return (
     <div className="App">
       <Container maxWidth={false}>
-        <Navbar/>
+        <Navbar handleLeft={setLeftTeam} handleRight={setRightTeam}/>
         <Grid container spacing={1}>
           <Grid item md={5}>
             <h2>{leftTeam}</h2> 
