@@ -1,4 +1,6 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
+import moment from 'moment'
+
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -13,6 +15,9 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import SportsBasketballIcon from '@mui/icons-material/SportsBasketball';
 
+import gamesToday from '../api/gamesToday';
+
+
 const pages = ['Home', 'Select Matchups', 'About'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
@@ -20,6 +25,16 @@ function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] =useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
   const [anchorMatchup, setAnchorMatchup] = useState(null)
+  const [todaysGames, setTodaysGames] = useState([])
+
+  useEffect(() => {
+    const getGames = async () => {
+      let currentDate = moment().format("YYYY-MM-DD")
+      let games = await gamesToday(currentDate)
+      setTodaysGames(games.response)
+    }
+    getGames().catch(console.error)
+  }, [])
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -45,7 +60,6 @@ function ResponsiveAppBar() {
     handleCloseNavMenu()
     setAnchorMatchup(null)
   }
-
 
   return (
     <AppBar position="static">
@@ -158,9 +172,9 @@ function ResponsiveAppBar() {
               open={Boolean(anchorMatchup)}
               onClose={handleCloseMatchup}
             >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseMatchup}>
-                  <Typography textAlign="center">{setting}</Typography>
+              {todaysGames.map((game) => (
+                <MenuItem key={game.id} onClick={handleCloseMatchup}>
+                  <Typography textAlign="center">{game.teams.away.name} vs {game.teams.home.name}</Typography>
                 </MenuItem>
               ))}
             </Menu>

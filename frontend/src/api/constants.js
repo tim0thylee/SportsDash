@@ -1,0 +1,1 @@
+export const currentSeason = "2022-2023"

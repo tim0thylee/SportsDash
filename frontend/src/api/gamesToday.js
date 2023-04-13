@@ -1,14 +1,21 @@
 import axios from "axios"
+import {currentSeason} from './constants'
 
-const gamesToday = async () => {
-    const response = await axios.get("https://tank01-fantasy-stats.p.rapidapi.com/getNBAGamesForDate", {
-        params: {gameDate: '20230209'},
+const gamesToday = async (today) => {
+    const response = await axios.get("https://api-basketball.p.rapidapi.com/games", {
+        params: {
+          date: today, 
+          league: '12', 
+          season: currentSeason, 
+          timezone: "America/Los_Angeles"
+        },
         headers: {
-          'X-RapidAPI-Key': '8c9aae083emshf71c6b63346abbfp19ef88jsn4f0b9c0fba72',
-          'X-RapidAPI-Host': 'tank01-fantasy-stats.p.rapidapi.com'
+          'X-RapidAPI-Key': process.env.REACT_APP_API_BASKETBALL_KEY,
+          'X-RapidAPI-Host': 'api-basketball.p.rapidapi.com'
         }
     })
-    console.log(response)
+    console.log(response.data)
+    return response.data
 }
 
 export default gamesToday
