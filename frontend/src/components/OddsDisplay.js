@@ -148,6 +148,7 @@ const OddsDiplay = ({rightTeam, leftTeam}) => {
 
     return (
         <div>
+            <h2 className="fiveMargin">Current Odds</h2>
             {showOdds()}
         </div>
     )

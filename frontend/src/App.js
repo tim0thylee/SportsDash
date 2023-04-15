@@ -53,8 +53,8 @@ function App() {
   useEffect(() => {
     // Call the data and store in odds. We do this to save number of data calls. 
     const callInjuryData= async () => {
-      const oddsData = debug ? INJURY_SAMPLE_DATA : await playerInjuryAPI()
-      setPlayersInjury(oddsData.items)
+      const injuryData = debug ? INJURY_SAMPLE_DATA : await playerInjuryAPI()
+      setPlayersInjury(injuryData.items)
     }
     
     callInjuryData().catch(console.error)
@@ -85,8 +85,11 @@ function App() {
         <Navbar handleLeft={setLeftTeam} handleRight={setRightTeam}/>
         <Grid container spacing={1}>
           <Grid item md={5}>
-            <h2>{leftTeam}</h2> 
-            <TeamAutoComplete team={leftTeam} setTeam={setLeftTeam}/>
+            <h2 className="fiveMargin">{leftTeam}</h2> 
+            <TeamAutoComplete 
+              team={leftTeam} 
+              setTeam={setLeftTeam}
+            />
             <TeamStatsDisplay
               title={"Team Stats"} 
               team = {leftTeam}
@@ -99,7 +102,7 @@ function App() {
               threes = {teamThrees}
             />
             <TeamStatsDisplay
-              title={"Opponent Stats"} 
+              title={"Defensive Stats"} 
               team = {leftTeam}
               assists = {oppAssists}
               points = {oppPoints}
@@ -116,7 +119,7 @@ function App() {
             <OddsDiplay leftTeam={leftTeam} rightTeam={rightTeam}/>
           </Grid>
           <Grid item md={5}>
-            <h2>{rightTeam}</h2>
+            <h2 className="fiveMargin">{rightTeam}</h2>
             <TeamAutoComplete team={rightTeam} setTeam={setRightTeam}/>
             <TeamStatsDisplay
               title={"Team Stats"}  
@@ -130,7 +133,7 @@ function App() {
               threes = {teamThrees}
             />
             <TeamStatsDisplay
-              title={"Opponent Stats"} 
+              title={"Defensive Stats"} 
               team = {rightTeam}
               assists = {oppAssists}
               points = {oppPoints}

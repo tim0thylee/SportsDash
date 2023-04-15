@@ -14,8 +14,8 @@ function OddsTable({leftTeam, rightTeam, odds}) {
         <TableHead>
             <TableRow>
             <TableCell>Book Name</TableCell>
-            <TableCell>{leftTeam.split(" ")[1]}</TableCell>
-            <TableCell>{rightTeam.split(" ")[1]}</TableCell>
+            <TableCell>{leftTeam}</TableCell>
+            <TableCell>{rightTeam}</TableCell>
             </TableRow>
         </TableHead>
         <TableBody>

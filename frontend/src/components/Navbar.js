@@ -30,9 +30,9 @@ function ResponsiveAppBar({handleLeft, handleRight}) {
   useEffect(() => {
     const getGames = async () => {
       let currentDate = moment().format("YYYY-MM-DD")
-      let games = await gamesToday(currentDate)
-      //for testing when there are not games that day. 
-      // let games = await gamesToday("2023-04-12")
+      // let games = await gamesToday(currentDate)
+      // for testing when there are not games that day. 
+      let games = await gamesToday("2023-04-12")
       setTodaysGames(games.response)
     }
     getGames().catch(console.error)
@@ -64,7 +64,12 @@ function ResponsiveAppBar({handleLeft, handleRight}) {
     handleCloseNavMenu()
     setAnchorMatchup(null)
   }
-  console.log(todaysGames)
+
+  const handleCloseNoMatchup = () => {
+    handleCloseNavMenu()
+    setAnchorMatchup(null)
+  }
+  
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
@@ -116,15 +121,15 @@ function ResponsiveAppBar({handleLeft, handleRight}) {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              <MenuItem key={"Home"} onClick={handleCloseNavMenu}>
+              {/* <MenuItem key={"Home"} onClick={handleCloseNavMenu}>
                 <Typography textAlign="center">Home</Typography>
-              </MenuItem>
-              <MenuItem key={"Select Matchups"} onClick={handleCloseNavMenu}>
+              </MenuItem> */}
+              <MenuItem key={"Select Matchups"} onClick={handleOpenMatchup}>
                 <Typography textAlign="center">Select Matchups</Typography>
               </MenuItem>
-              <MenuItem key={"About"} onClick={handleCloseNavMenu}>
+              {/* <MenuItem key={"About"} onClick={handleCloseNavMenu}>
                 <Typography textAlign="center">About</Typography>
-              </MenuItem>
+              </MenuItem> */}
             </Menu>
           </Box>
           <SportsBasketballIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
@@ -146,13 +151,13 @@ function ResponsiveAppBar({handleLeft, handleRight}) {
             SportsDash
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            <Button
+            {/* <Button
               key={"Home"}
               onClick={handleCloseNavMenu}
               sx={{ my: 2, color: 'white', display: 'block' }}
             >
               Home
-            </Button>
+            </Button> */}
             <Button
               key={"Select Matchups"}
               onClick={handleOpenMatchup}
@@ -174,10 +179,10 @@ function ResponsiveAppBar({handleLeft, handleRight}) {
                 horizontal: 'right',
               }}
               open={Boolean(anchorMatchup)}
-              onClose={handleCloseMatchup}
+              onClose={handleCloseNoMatchup}
             >
               {!todaysGames.length ? 
-                <MenuItem onClick={handleCloseMatchup}>
+                <MenuItem onClick={handleCloseNoMatchup}>
                   <Typography textAlign="center">No Games Today</Typography>
                 </MenuItem> : 
                 todaysGames.map((game) => (
@@ -186,15 +191,15 @@ function ResponsiveAppBar({handleLeft, handleRight}) {
                 </MenuItem>
               ))}
             </Menu>
-            <Button
+            {/* <Button
               key={"About"}
               onClick={handleCloseNavMenu}
               sx={{ my: 2, color: 'white', display: 'block' }}
             >
              About
-            </Button>
+            </Button> */}
           </Box>
-          <Box sx={{ flexGrow: 0 }}>
+          {/* <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Timothy Lee" src="/static/images/avatar/2.jpg" />
@@ -222,7 +227,7 @@ function ResponsiveAppBar({handleLeft, handleRight}) {
                 </MenuItem>
               ))}
             </Menu>
-          </Box>
+          </Box> */}
         </Toolbar>
       </Container>
     </AppBar>

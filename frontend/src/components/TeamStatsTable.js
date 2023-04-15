@@ -10,7 +10,7 @@ import Paper from '@mui/material/Paper';
 const TeamStatsTable = ({allStats}) => {
 
   return (
-    <TableContainer component={Paper}>
+    <TableContainer component={Paper} sx={{ marginBottom: '50px' }}>
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead>
           <TableRow>

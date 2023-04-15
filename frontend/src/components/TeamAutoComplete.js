@@ -44,7 +44,7 @@ const TeamAutoComplete = ({team, setTeam}) => {
                 setTeam(newValue)
             }}
             value={team}
-            sx={{ width: 300}}
+            sx={{ width: 300, marginBottom: '30px'}}
             renderInput={(params) => <TextField {...params} label="Choose a team" />}
       />
     )

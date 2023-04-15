@@ -58,7 +58,8 @@ const TeamStatsTable = ({team, allTeamInfo}) => {
         })
     }
     return (
-        <div>
+        <div style={{marginBottom: '30px'}}>
+            <h2>Last 10 Games Results</h2>
             <Box
                 sx={{
                 display: 'flex',
