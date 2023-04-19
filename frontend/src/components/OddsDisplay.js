@@ -136,13 +136,13 @@ const OddsDiplay = ({rightTeam, leftTeam}) => {
                                 odds={odds[oddsIndex]}
                             />
                 } else {
-                    return <div>These 2 teams are not playing each other</div>
+                    return <h3>There are no upcoming matchups for these two teams.</h3>
                 }
             } else {
-                return <div>One or more of these teams are not playing today.</div>
+                return <h3>One or more of these teams are not playing today.</h3>
             }
         } else {
-            return <div>These two teams are the same</div>
+            return <h3>These two teams are the same.</h3>
         }
     }
 

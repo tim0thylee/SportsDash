@@ -1,22 +1,20 @@
 import React, {useState, useEffect} from 'react'
-import './App.css';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid'
 
-import TeamAutoComplete from './components/TeamAutoComplete';
-import OddsDiplay from './components/OddsDisplay';
-import TeamStatsDisplay from './components/TeamStatsDisplay'
-import PlayerInjuryDisplay from './components/PlayerInjuryDisplay';
-import LastGamesDisplay from './components/LastGamesDisplay'
-import Navbar from './components/Navbar'
+import TeamAutoComplete from '../components/TeamAutoComplete';
+import OddsDiplay from '../components/OddsDisplay';
+import TeamStatsDisplay from '../components/TeamStatsDisplay'
+import PlayerInjuryDisplay from '../components/PlayerInjuryDisplay';
+import LastGamesDisplay from '../components/LastGamesDisplay'
 
-import playerInjuryAPI from './api/playerInjury'
-import {INJURY_SAMPLE_DATA} from './api/SampleData'
-import { team_assists, team_points, team_rebounds, team_blocks, team_steals, team_threes, team_turnovers } from './api/teamStats';
-import { opp_assists, opp_points, opp_rebounds, opp_blocks, opp_steals, opp_threes, opp_turnovers } from './api/oppStats';
-import teamInfo from './api/teamInfo'
+import playerInjuryAPI from '../api/playerInjury'
+import {INJURY_SAMPLE_DATA} from '../api/SampleData'
+import { team_assists, team_points, team_rebounds, team_blocks, team_steals, team_threes, team_turnovers } from '../api/teamStats';
+import { opp_assists, opp_points, opp_rebounds, opp_blocks, opp_steals, opp_threes, opp_turnovers } from '../api/oppStats';
+import teamInfo from '../api/teamInfo'
 
-import { arrayToObjTeam, arrayToObjNbaTeams } from './utils/utils';
+import { arrayToObjTeam, arrayToObjNbaTeams } from '../utils/utils';
 
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
@@ -25,10 +23,9 @@ import '@fontsource/roboto/700.css';
 
 const debug = false
 
-function App() {
+function App({setLeftTeam, setRightTeam, leftTeam, rightTeam}) {
   // purpose of global state is for the purpose of less calls to the api. 
-  const [leftTeam, setLeftTeam] = useState("Boston Celtics")
-  const [rightTeam, setRightTeam] = useState("Miami Heat")
+
 
   const [playersInjury, setPlayersInjury] = useState([])
 
@@ -79,72 +76,69 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
-      <Container maxWidth={false}>
-        <Navbar/>
-        <Grid container spacing={1}>
-          <Grid item md={5}>
-            <h2>{leftTeam}</h2> 
-            <TeamAutoComplete team={leftTeam} setTeam={setLeftTeam}/>
-            <TeamStatsDisplay
-              title={"Team Stats"} 
-              team = {leftTeam}
-              assists = {teamAssists}
-              points = {teamPoints}
-              rebounds = {teamRebounds}
-              blocks = {teamBlocks}
-              steals = {teamSteals}
-              turnovers = {teamTurnovers}
-              threes = {teamThrees}
-            />
-            <TeamStatsDisplay
-              title={"Opponent Stats"} 
-              team = {leftTeam}
-              assists = {oppAssists}
-              points = {oppPoints}
-              rebounds = {oppRebounds}
-              blocks = {oppBlocks}
-              steals = {oppSteals}
-              turnovers = {oppTurnovers}
-              threes = {oppThrees}
-            />
-            <LastGamesDisplay team={leftTeam} allTeamInfo={nbaTeamInfo}/>
-            <PlayerInjuryDisplay team={leftTeam} injuries={playersInjury} />
-          </Grid>
-          <Grid item md={2}>
-            <OddsDiplay leftTeam={leftTeam} rightTeam={rightTeam}/>
-          </Grid>
-          <Grid item md={5}>
-            <h2>{rightTeam}</h2>
-            <TeamAutoComplete team={rightTeam} setTeam={setRightTeam}/>
-            <TeamStatsDisplay
-              title={"Team Stats"}  
-              team = {rightTeam}
-              assists = {teamAssists}
-              points = {teamPoints}
-              rebounds = {teamRebounds}
-              blocks = {teamBlocks}
-              steals = {teamSteals}
-              turnovers = {teamTurnovers}
-              threes = {teamThrees}
-            />
-            <TeamStatsDisplay
-              title={"Opponent Stats"} 
-              team = {rightTeam}
-              assists = {oppAssists}
-              points = {oppPoints}
-              rebounds = {oppRebounds}
-              blocks = {oppBlocks}
-              steals = {oppSteals}
-              turnovers = {oppTurnovers}
-              threes = {oppThrees}
-            />
-            <LastGamesDisplay team={rightTeam} allTeamInfo={nbaTeamInfo}/>
-            <PlayerInjuryDisplay team={rightTeam} injuries={playersInjury} /> 
-          </Grid>
+    <Container maxWidth={false}>
+      <Grid container spacing={1}>
+        <Grid item md={5}>
+          <h2>{leftTeam}</h2> 
+          <TeamAutoComplete team={leftTeam} setTeam={setLeftTeam}/>
+          <TeamStatsDisplay
+            title={"Team Stats"} 
+            team = {leftTeam}
+            assists = {teamAssists}
+            points = {teamPoints}
+            rebounds = {teamRebounds}
+            blocks = {teamBlocks}
+            steals = {teamSteals}
+            turnovers = {teamTurnovers}
+            threes = {teamThrees}
+          />
+          <TeamStatsDisplay
+            title={"Opponent Stats"} 
+            team = {leftTeam}
+            assists = {oppAssists}
+            points = {oppPoints}
+            rebounds = {oppRebounds}
+            blocks = {oppBlocks}
+            steals = {oppSteals}
+            turnovers = {oppTurnovers}
+            threes = {oppThrees}
+          />
+          <LastGamesDisplay team={leftTeam} allTeamInfo={nbaTeamInfo}/>
+          <PlayerInjuryDisplay team={leftTeam} injuries={playersInjury} />
         </Grid>
-      </Container>
-    </div>
+        <Grid item md={2}>
+          <OddsDiplay leftTeam={leftTeam} rightTeam={rightTeam}/>
+        </Grid>
+        <Grid item md={5}>
+          <h2>{rightTeam}</h2>
+          <TeamAutoComplete team={rightTeam} setTeam={setRightTeam}/>
+          <TeamStatsDisplay
+            title={"Team Stats"}  
+            team = {rightTeam}
+            assists = {teamAssists}
+            points = {teamPoints}
+            rebounds = {teamRebounds}
+            blocks = {teamBlocks}
+            steals = {teamSteals}
+            turnovers = {teamTurnovers}
+            threes = {teamThrees}
+          />
+          <TeamStatsDisplay
+            title={"Opponent Stats"} 
+            team = {rightTeam}
+            assists = {oppAssists}
+            points = {oppPoints}
+            rebounds = {oppRebounds}
+            blocks = {oppBlocks}
+            steals = {oppSteals}
+            turnovers = {oppTurnovers}
+            threes = {oppThrees}
+          />
+          <LastGamesDisplay team={rightTeam} allTeamInfo={nbaTeamInfo}/>
+          <PlayerInjuryDisplay team={rightTeam} injuries={playersInjury} /> 
+        </Grid>
+      </Grid>
+    </Container>
   );
 }
 

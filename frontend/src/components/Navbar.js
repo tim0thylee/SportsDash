@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import moment from 'moment'
+import { Link } from 'wouter';
 
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -30,9 +31,9 @@ function ResponsiveAppBar({handleLeft, handleRight}) {
   useEffect(() => {
     const getGames = async () => {
       let currentDate = moment().format("YYYY-MM-DD")
-      // let games = await gamesToday(currentDate)
+      let games = await gamesToday(currentDate)
       // for testing when there are not games that day. 
-      let games = await gamesToday("2023-04-12")
+      // let games = await gamesToday("2023-04-12")
       setTodaysGames(games.response)
     }
     getGames().catch(console.error)
@@ -63,6 +64,7 @@ function ResponsiveAppBar({handleLeft, handleRight}) {
     handleRight(game.teams.home.name)
     handleCloseNavMenu()
     setAnchorMatchup(null)
+    console.log("hellow")
   }
 
   const handleCloseNoMatchup = () => {
@@ -121,9 +123,11 @@ function ResponsiveAppBar({handleLeft, handleRight}) {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {/* <MenuItem key={"Home"} onClick={handleCloseNavMenu}>
-                <Typography textAlign="center">Home</Typography>
-              </MenuItem> */}
+              <MenuItem key={"Home"} onClick={handleCloseNavMenu}>
+                <Link href="/" className="noCustomStyle">
+                  <Typography textAlign="center">Home</Typography>
+                </Link>
+              </MenuItem>
               <MenuItem key={"Select Matchups"} onClick={handleOpenMatchup}>
                 <Typography textAlign="center">Select Matchups</Typography>
               </MenuItem>
@@ -151,13 +155,15 @@ function ResponsiveAppBar({handleLeft, handleRight}) {
             SportsDash
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {/* <Button
+            <Button
               key={"Home"}
               onClick={handleCloseNavMenu}
               sx={{ my: 2, color: 'white', display: 'block' }}
             >
-              Home
-            </Button> */}
+              <Link href="/" className="noCustomStyle">
+                  Home
+              </Link>
+            </Button>
             <Button
               key={"Select Matchups"}
               onClick={handleOpenMatchup}
@@ -186,9 +192,13 @@ function ResponsiveAppBar({handleLeft, handleRight}) {
                   <Typography textAlign="center">No Games Today</Typography>
                 </MenuItem> : 
                 todaysGames.map((game) => (
-                <MenuItem key={game.id} onClick={() => handleCloseMatchup(game)}>
-                  <Typography textAlign="center">{game.teams.away.name} vs {game.teams.home.name}</Typography>
-                </MenuItem>
+                  <MenuItem key={game.id} onClick={() => handleCloseMatchup(game)}>
+                      <Link href="/matchup" className="noCustomStyle">
+                        <Typography textAlign="center">
+                          {game.teams.away.name} vs {game.teams.home.name}
+                        </Typography>
+                      </Link>
+                  </MenuItem>
               ))}
             </Menu>
             {/* <Button
