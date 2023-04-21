@@ -1,0 +1,18 @@
+.majorParagraph {
+    font-size: 50px;
+}
+
+.sportsLogo {
+    width: auto;
+    height: auto;
+    max-width: 500px;
+    max-height: 500px
+}
+
+.majorParagraph {
+    margin-bottom: 20px;
+}
+
+.minorParagraph {
+    margin-bottom: 30px;
+}
