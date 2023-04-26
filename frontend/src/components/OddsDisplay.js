@@ -1,105 +1,9 @@
 import {useState, useEffect} from 'react'
+import { ODDS_SAMPLE_DATA } from '../api/SampleData'
 import OddsTable from './OddsTable'
 import oddsApi from '../api/odds'
 
 const debug = true
-
-const SAMPLE_DATA = [
-    {
-        away_team: "Detroit Pistons",
-        home_team: "Charlotte Hornets",
-        id: "07d93249af6903a9e4bbfd5b13c76476",
-        bookmakers: [
-            {
-                key: 'draftkings', 
-                title: 'DraftKings', 
-                last_update: '2023-02-27T08:14:06Z', 
-                markets: [
-                    {
-                        key: 'h2h', 
-                        last_update: '2023-02-27T08:14:06Z', 
-                        outcomes: [
-                            {
-                                name: 'Charlotte Hornets',
-                                price: -260},
-                            {
-                                name: 'Detroit Pistons', 
-                                price: 220}
-                        ]
-                    }
-                ]
-            },
-            {
-                key: 'williamhill_us', 
-                title: 'William Hill (US)', 
-                last_update: '2023-02-27T08:14:06Z', 
-                markets: [
-                    {
-                        key: 'h2h', 
-                        last_update: '2023-02-27T08:14:06Z', 
-                        outcomes: [
-                            {
-                                name: 'Charlotte Hornets',
-                                price: -260
-                            },
-                            {
-                                name: 'Detroit Pistons', 
-                                price: 220
-                            }
-                        ]
-                    }
-                ]
-            }
-        ]
-    },
-    {
-        away_team: "Philadelphia 76ers",
-        home_team: "Miami Heat",
-        id: "3479b09a4f714c6af3801e4393a7a84e",
-        bookmakers: [
-            {
-                key: 'draftkings', 
-                title: 'DraftKings', 
-                last_update: '2023-02-27T08:14:06Z', 
-                markets: [
-                    {
-                        key: 'h2h', 
-                        last_update: '2023-02-27T08:14:06Z', 
-                        outcomes: [
-                            {
-                                name: 'Philadelphia 76ers',
-                                price: -260},
-                            {
-                                name: 'Miami Heat', 
-                                price: 220}
-                        ]
-                    }
-                ]
-            },
-            {
-                key: 'williamhill_us', 
-                title: 'William Hill (US)', 
-                last_update: '2023-02-27T08:14:06Z', 
-                markets: [
-                    {
-                        key: 'h2h', 
-                        last_update: '2023-02-27T08:14:06Z', 
-                        outcomes: [
-                            {
-                                name: 'Philadelphia 76ers',
-                                price: -260
-                            },
-                            {
-                                name: 'Miami Heat', 
-                                price: 220
-                            }
-                        ]
-                    }
-                ]
-            }
-        ]
-    }
-]
 
 const OddsDiplay = ({rightTeam, leftTeam}) => {
     const [playsToday, setPlaysToday] = useState({})
@@ -108,7 +12,7 @@ const OddsDiplay = ({rightTeam, leftTeam}) => {
     useEffect(() => {
         // Call the data and store in odds. 
         const callData= async () => {
-            const oddsData = debug ? SAMPLE_DATA : await oddsApi()
+            const oddsData = debug ? ODDS_SAMPLE_DATA : await oddsApi()
 
             setOdds(oddsData)
             const temp = {}
@@ -147,7 +51,7 @@ const OddsDiplay = ({rightTeam, leftTeam}) => {
     }
 
     return (
-        <div>
+        <div style={{display: "flex", flexDirection: 'column', alignItems: "center"}}>
             <h2 className="fiveMargin">Current Odds</h2>
             {showOdds()}
         </div>

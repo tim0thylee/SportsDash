@@ -18,8 +18,8 @@ import '@fontsource/roboto/700.css';
 const debug = false
 
 function App() {
-  const [leftTeam, setLeftTeam] = useState("Boston Celtics")
-  const [rightTeam, setRightTeam] = useState("Miami Heat")
+  const [leftTeam, setLeftTeam] = useState("Charlotte Hornets")
+  const [rightTeam, setRightTeam] = useState("Detroit Pistons")
   return (
     <div className="App">
       <Container maxWidth={false}>

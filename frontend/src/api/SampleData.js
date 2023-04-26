@@ -773,5 +773,121 @@ const INJURY_SAMPLE_DATA = {
     "spider_name": "injury"
 }
 
+const ODDS_SAMPLE_DATA = [
+    {
+        away_team: "Detroit Pistons",
+        home_team: "Charlotte Hornets",
+        id: "07d93249af6903a9e4bbfd5b13c76476",
+        bookmakers: [
+            {
+                key: 'draftkings', 
+                title: 'DraftKings', 
+                last_update: '2023-02-27T08:14:06Z', 
+                markets: [
+                    {
+                        key: 'h2h', 
+                        last_update: '2023-02-27T08:14:06Z', 
+                        outcomes: [
+                            {
+                                name: 'Charlotte Hornets',
+                                price: -260},
+                            {
+                                name: 'Detroit Pistons', 
+                                price: 220}
+                        ]
+                    }
+                ]
+            },
+            {
+                key: 'williamhill_us', 
+                title: 'William Hill (US)', 
+                last_update: '2023-02-27T08:14:06Z', 
+                markets: [
+                    {
+                        key: 'h2h', 
+                        last_update: '2023-02-27T08:14:06Z', 
+                        outcomes: [
+                            {
+                                name: 'Charlotte Hornets',
+                                price: -270
+                            },
+                            {
+                                name: 'Detroit Pistons', 
+                                price: 240
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                key: 'bovada', 
+                title: 'Bovada', 
+                last_update: '2023-02-27T08:14:06Z', 
+                markets: [
+                    {
+                        key: 'h2h', 
+                        last_update: '2023-02-27T08:14:06Z', 
+                        outcomes: [
+                            {
+                                name: 'Charlotte Hornets',
+                                price: -290},
+                            {
+                                name: 'Detroit Pistons', 
+                                price: 200}
+                        ]
+                    }
+                ]
+            },
+        ]
+    },
+    {
+        away_team: "Philadelphia 76ers",
+        home_team: "Miami Heat",
+        id: "3479b09a4f714c6af3801e4393a7a84e",
+        bookmakers: [
+            {
+                key: 'draftkings', 
+                title: 'DraftKings', 
+                last_update: '2023-02-27T08:14:06Z', 
+                markets: [
+                    {
+                        key: 'h2h', 
+                        last_update: '2023-02-27T08:14:06Z', 
+                        outcomes: [
+                            {
+                                name: 'Philadelphia 76ers',
+                                price: -260},
+                            {
+                                name: 'Miami Heat', 
+                                price: 220}
+                        ]
+                    }
+                ]
+            },
+            {
+                key: 'williamhill_us', 
+                title: 'William Hill (US)', 
+                last_update: '2023-02-27T08:14:06Z', 
+                markets: [
+                    {
+                        key: 'h2h', 
+                        last_update: '2023-02-27T08:14:06Z', 
+                        outcomes: [
+                            {
+                                name: 'Philadelphia 76ers',
+                                price: -260
+                            },
+                            {
+                                name: 'Miami Heat', 
+                                price: 220
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]
 
-export {INJURY_SAMPLE_DATA}
+
+export {INJURY_SAMPLE_DATA, ODDS_SAMPLE_DATA}

@@ -21,7 +21,7 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
-const debug = false
+const debug = false        
 
 function App({setLeftTeam, setRightTeam, leftTeam, rightTeam}) {
   // purpose of global state is for the purpose of less calls to the api. 
@@ -79,7 +79,7 @@ function App({setLeftTeam, setRightTeam, leftTeam, rightTeam}) {
     <Container maxWidth={false}>
       <Grid container spacing={1}>
         <Grid item md={5}>
-          <h2>{leftTeam}</h2> 
+          <h2 style={{marginBottom: "10px"}}>{leftTeam}</h2> 
           <TeamAutoComplete team={leftTeam} setTeam={setLeftTeam}/>
           <TeamStatsDisplay
             title={"Team Stats"} 
@@ -91,6 +91,9 @@ function App({setLeftTeam, setRightTeam, leftTeam, rightTeam}) {
             steals = {teamSteals}
             turnovers = {teamTurnovers}
             threes = {teamThrees}
+            textTip={`These are the average (mean) statistics 
+            for the selected team for the current season. The rank represents the 
+            team's rank in the category out of 30 nba teams.`}
           />
           <TeamStatsDisplay
             title={"Opponent Stats"} 
@@ -102,6 +105,9 @@ function App({setLeftTeam, setRightTeam, leftTeam, rightTeam}) {
             steals = {oppSteals}
             turnovers = {oppTurnovers}
             threes = {oppThrees}
+            textTip={`These are the average (mean) statistics 
+            for all of the opponents played in the current season. The rank represents the 
+            team's rank in the category out of 30 nba teams.`}
           />
           <LastGamesDisplay team={leftTeam} allTeamInfo={nbaTeamInfo}/>
           <PlayerInjuryDisplay team={leftTeam} injuries={playersInjury} />
@@ -110,7 +116,7 @@ function App({setLeftTeam, setRightTeam, leftTeam, rightTeam}) {
           <OddsDiplay leftTeam={leftTeam} rightTeam={rightTeam}/>
         </Grid>
         <Grid item md={5}>
-          <h2>{rightTeam}</h2>
+          <h2 style={{marginBottom: "10px"}}>{rightTeam}</h2>
           <TeamAutoComplete team={rightTeam} setTeam={setRightTeam}/>
           <TeamStatsDisplay
             title={"Team Stats"}  
@@ -122,6 +128,9 @@ function App({setLeftTeam, setRightTeam, leftTeam, rightTeam}) {
             steals = {teamSteals}
             turnovers = {teamTurnovers}
             threes = {teamThrees}
+            textTip={`These are the average (mean) statistics 
+            for the selected team for the current season. The rank represents the 
+            team's rank in the category out of 30 nba teams.`}
           />
           <TeamStatsDisplay
             title={"Opponent Stats"} 
@@ -133,6 +142,9 @@ function App({setLeftTeam, setRightTeam, leftTeam, rightTeam}) {
             steals = {oppSteals}
             turnovers = {oppTurnovers}
             threes = {oppThrees}
+            textTip={`These are the average (mean) statistics 
+            for the selected team for the current season. The rank represents the 
+            team's rank in the category out of 30 nba teams.`}
           />
           <LastGamesDisplay team={rightTeam} allTeamInfo={nbaTeamInfo}/>
           <PlayerInjuryDisplay team={rightTeam} injuries={playersInjury} /> 

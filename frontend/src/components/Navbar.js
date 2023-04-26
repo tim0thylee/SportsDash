@@ -71,7 +71,7 @@ function ResponsiveAppBar({handleLeft, handleRight}) {
     handleCloseNavMenu()
     setAnchorMatchup(null)
   }
-  
+  console.log(todaysGames)
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
@@ -155,15 +155,15 @@ function ResponsiveAppBar({handleLeft, handleRight}) {
             SportsDash
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            <Button
-              key={"Home"}
-              onClick={handleCloseNavMenu}
-              sx={{ my: 2, color: 'white', display: 'block' }}
-            >
-              <Link href="/" className="noCustomStyle">
-                  Home
-              </Link>
-            </Button>
+            <Link href="/" className="noCustomStyle">
+              <Button
+                key={"Home"}
+                onClick={handleCloseNavMenu}
+                sx={{ my: 2, color: 'white', display: 'block' }}
+              >
+                Home
+              </Button>
+            </Link>
             <Button
               key={"Select Matchups"}
               onClick={handleOpenMatchup}
@@ -192,13 +192,13 @@ function ResponsiveAppBar({handleLeft, handleRight}) {
                   <Typography textAlign="center">No Games Today</Typography>
                 </MenuItem> : 
                 todaysGames.map((game) => (
-                  <MenuItem key={game.id} onClick={() => handleCloseMatchup(game)}>
-                      <Link href="/matchup" className="noCustomStyle">
-                        <Typography textAlign="center">
+                  <Link href="/matchup" className="noCustomStyle" onClick={() => handleCloseMatchup(game)}>
+                    <MenuItem key={game.id}>
+                      <Typography textAlign="center">
                           {game.teams.away.name} vs {game.teams.home.name}
-                        </Typography>
-                      </Link>
-                  </MenuItem>
+                      </Typography>
+                    </MenuItem>
+                  </Link>
               ))}
             </Menu>
             {/* <Button
