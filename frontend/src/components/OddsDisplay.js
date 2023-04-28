@@ -30,7 +30,7 @@ const OddsDiplay = ({rightTeam, leftTeam}) => {
     console.log(odds)
     const showOdds = () => {
         // if the selected teams are playing, show the odds. 
-        if (rightTeam != leftTeam){
+        if (rightTeam !== leftTeam){
             if (rightTeam in playsToday && leftTeam in playsToday) {
                 const oddsIndex = playsToday[rightTeam]
                 if (oddsIndex === playsToday[leftTeam]) {
@@ -40,7 +40,7 @@ const OddsDiplay = ({rightTeam, leftTeam}) => {
                                 odds={odds[oddsIndex]}
                             />
                 } else {
-                    return <h3>There are no upcoming matchups for these two teams.</h3>
+                    return <h3>There are no odds currently available these two teams.</h3>
                 }
             } else {
                 return <h3>One or more of these teams are not playing today.</h3>

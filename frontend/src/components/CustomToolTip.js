@@ -3,6 +3,7 @@ import Tooltip from '@mui/material/Tooltip';
 import Button from '@mui/material/Button';
 import InfoIcon from '@mui/icons-material/Info';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
+import Typography from '@mui/material/Typography';
 
 
 const CustomTip = ({textTip}) => {
@@ -28,7 +29,7 @@ const CustomTip = ({textTip}) => {
                 disableFocusListener
                 disableHoverListener
                 disableTouchListener
-                title={textTip}
+                title={<Typography fontSize={15}>{textTip}</Typography>}
             >
                 <Button onClick={handleTooltipOpen}>
                     <InfoIcon sx={{fontSize: 'medium', color:"black"}}/>
