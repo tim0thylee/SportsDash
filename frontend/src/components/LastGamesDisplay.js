@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import pastGames from '../api/pastGames'
+import CustomToolTip from './CustomToolTip'
 
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
@@ -59,7 +60,10 @@ const TeamStatsTable = ({team, allTeamInfo}) => {
     }
     return (
         <div style={{marginBottom: '30px'}}>
-            <h2>Last 10 Games Results</h2>
+            <div style={{display: 'flex', alignItems: 'center'}}>
+                <h2>Last 10 Games Results</h2>
+                <CustomToolTip textTip={`These are the Win/Loss of the most recent 10 games played by the ${team}.`}/>
+            </div>
             <Box
                 sx={{
                 display: 'flex',

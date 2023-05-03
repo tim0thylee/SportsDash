@@ -32,6 +32,9 @@ const teamCon= {
     "Dallas":"Dallas Mavericks"
 }
 
+//This function is to make sure that the data that comes
+//in has the exact spelling of the team name that is used
+//in the rest of the application. 
 export const arrayToObjTeam = async (data, setState) => {
     const statsArray = await data()
 
@@ -46,6 +49,8 @@ export const arrayToObjTeam = async (data, setState) => {
     setState(teamStatsObj)
 }
 
+//this function is to turn the incoming data into an easily accessible
+//hash table
 export const arrayToObjNbaTeams = async (data, setState) => {
     const teamNames = await data()
     const teamNamesObj = {}

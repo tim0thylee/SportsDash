@@ -1,12 +1,14 @@
 import React, {useState, useEffect} from 'react'
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid'
+import ImageNotSupportedIcon from '@mui/icons-material/ImageNotSupported';
 
 import TeamAutoComplete from '../components/TeamAutoComplete';
 import OddsDiplay from '../components/OddsDisplay';
 import TeamStatsDisplay from '../components/TeamStatsDisplay'
 import PlayerInjuryDisplay from '../components/PlayerInjuryDisplay';
 import LastGamesDisplay from '../components/LastGamesDisplay'
+import MatchupRecordDisplay from '../components/MatchupRecordDisplay';
 
 import playerInjuryAPI from '../api/playerInjury'
 import {INJURY_SAMPLE_DATA} from '../api/SampleData'
@@ -20,6 +22,7 @@ import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
+
 
 const debug = false        
 
@@ -71,14 +74,25 @@ function App({setLeftTeam, setRightTeam, leftTeam, rightTeam}) {
     arrayToObjTeam(opp_turnovers, setOppTurnovers).catch(console.error)
     arrayToObjTeam(opp_threes, setOppThrees).catch(console.error)
 
-    //This call is to receive the teams from the nba api
+    //This call is to receive the teams from the nba api.
+    //it retrieved data such as team logo and id
     arrayToObjNbaTeams(teamInfo, setNbaTeamInfo)
   }, [])
+
+  //this is needed to handle the case where 
+  const showNbaLogo = (curTeam) => {
+    if (curTeam in nbaTeamInfo) {
+      return <img src={nbaTeamInfo[curTeam].logo} alt={curTeam}/>
+    } else {
+      return <ImageNotSupportedIcon fontSize="large" sx={{height: '150px'}}/>
+    }
+  }
 
   return (
     <Container maxWidth={false}>
       <Grid container spacing={1}>
         <Grid item md={5}>
+          {showNbaLogo(leftTeam)}
           <h2 style={{marginBottom: "10px"}}>{leftTeam}</h2> 
           <TeamAutoComplete team={leftTeam} setTeam={setLeftTeam}/>
           <TeamStatsDisplay
@@ -114,8 +128,14 @@ function App({setLeftTeam, setRightTeam, leftTeam, rightTeam}) {
         </Grid>
         <Grid item md={2}>
           <OddsDiplay leftTeam={leftTeam} rightTeam={rightTeam}/>
+          <MatchupRecordDisplay 
+            leftTeam={leftTeam} 
+            rightTeam={rightTeam}
+            teamInfo={nbaTeamInfo}
+          />
         </Grid>
         <Grid item md={5}>
+          {showNbaLogo(rightTeam)}
           <h2 style={{marginBottom: "10px"}}>{rightTeam}</h2>
           <TeamAutoComplete team={rightTeam} setTeam={setRightTeam}/>
           <TeamStatsDisplay
