@@ -6,7 +6,7 @@ import ClickAwayListener from '@mui/material/ClickAwayListener';
 import Typography from '@mui/material/Typography';
 
 
-const CustomTip = ({textTip}) => {
+const CustomTip = ({textTip, customStyle}) => {
 
     const [open, setOpen] = useState(false);
 
@@ -30,6 +30,7 @@ const CustomTip = ({textTip}) => {
                 disableHoverListener
                 disableTouchListener
                 title={<Typography fontSize={15}>{textTip}</Typography>}
+                sx={{...customStyle}}
             >
                 <Button onClick={handleTooltipOpen}>
                     <InfoIcon sx={{fontSize: 'medium', color:"black"}}/>

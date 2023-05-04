@@ -2,9 +2,24 @@
   /* display: flex;
   justify-content: center;
   align-items: center; */
-  height: 100vh; 
-  background-color: #e8f4f8;
+  /* height: 100vh;  */
+  /* background-color: #e8f4f8; */
 }
+
+.bg_design {
+  background-image: url('images/bg_image.jpg');
+  background-size: cover;
+  opacity: 0.4;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
 
 .fiveMargin {
   margin: 10px

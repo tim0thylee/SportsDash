@@ -89,7 +89,14 @@ function App({setLeftTeam, setRightTeam, leftTeam, rightTeam}) {
   }
 
   return (
-    <Container maxWidth={false}>
+    <Container 
+        maxWidth={false} 
+        sx={{
+          backgroundColor: 'rgba(232,244,248, 0.7)',
+          marginTop: "20px",
+          borderRadius: "10px"
+        }}
+      >
       <Grid container spacing={1}>
         <Grid item md={5}>
           {showNbaLogo(leftTeam)}

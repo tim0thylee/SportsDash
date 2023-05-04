@@ -35,6 +35,9 @@ const HomePage = () => {
                         SportsDash helps you view the data you need
                         <br/>
                         to make smarter bets and find the best value.
+                        <br/>
+                        <br/>
+                        Now showing data for the 2022-2023 NBA season.
                     </p>
                 </Animated>
                 <Animated animationIn='fadeIn' animationInDelay={1000} >
