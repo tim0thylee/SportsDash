@@ -22,7 +22,6 @@ const MatchupRecordDisplay = ({leftTeam, rightTeam, teamInfo}) => {
         }
         callHeadToHeadData()
     }, [leftTeam, rightTeam, teamInfo])
-    console.log("matches", matches)
 
     const renderMatches = () => {
         return matches.map((match) => {
