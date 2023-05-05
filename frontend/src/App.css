@@ -20,7 +20,6 @@
   height: 100%;
 }
 
-
 .fiveMargin {
   margin: 10px
 }
@@ -28,4 +27,14 @@
 .noCustomStyle {
   color: inherit;
   text-decoration: none;
+}
+
+.MuiTableCell-root {
+  padding: 5px;
+  color: inherit;
+}
+
+.MuiTableHead-root {
+  background-color: #1976d2;
+  color: white;
 }

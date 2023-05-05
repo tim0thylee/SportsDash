@@ -7,6 +7,8 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
+
+
 const PlayerInjuryTable = ({players}) => {
   return (
     <TableContainer component={Paper}>
@@ -14,10 +16,10 @@ const PlayerInjuryTable = ({players}) => {
         <TableHead>
           <TableRow>
             <TableCell>Name</TableCell>
-            <TableCell align="right">Position</TableCell>
-            <TableCell align="right">Injury Date</TableCell>
-            <TableCell align="right">Injury Status</TableCell>
-            <TableCell align="right">Injury Description</TableCell>
+            <TableCell align="center">Position</TableCell>
+            <TableCell align="center">Injury Date</TableCell>
+            <TableCell align="center">Injury Status</TableCell>
+            <TableCell align="center">Injury Description</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -29,10 +31,10 @@ const PlayerInjuryTable = ({players}) => {
               <TableCell component="th" scope="row">
                 {player.player_name}
               </TableCell>
-              <TableCell align="right">{player.player_pos}</TableCell>
-              <TableCell align="right">{player.injury_date}</TableCell>
-              <TableCell align="right">{player.injury_status}</TableCell>
-              <TableCell align="right">{player.injury_desc}</TableCell>
+              <TableCell align="center">{player.player_pos}</TableCell>
+              <TableCell align="center">{player.injury_date}</TableCell>
+              <TableCell align="center">{player.injury_status}</TableCell>
+              <TableCell align="left">{player.injury_desc}</TableCell>
             </TableRow>
           ))}
         </TableBody>

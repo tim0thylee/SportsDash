@@ -40,7 +40,7 @@ const OddsDiplay = ({rightTeam, leftTeam}) => {
                                 odds={odds[oddsIndex]}
                             />
                 } else {
-                    return <h3>There are no odds currently available these two teams.</h3>
+                    return <h3>There are no odds currently available.</h3>
                 }
             } else {
                 return <h3>One or more of these teams are not playing today.</h3>

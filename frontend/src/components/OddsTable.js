@@ -70,10 +70,10 @@ function OddsTable({leftTeam, rightTeam, odds}) {
                     <TableCell component="th" scope="row">
                         {odd.title}
                     </TableCell>
-                    <TableCell align="right">
+                    <TableCell>
                         {leftTeamPrice}
                     </TableCell>
-                    <TableCell align="right">
+                    <TableCell>
                         {rightTeamPrice}
                     </TableCell>
                 </TableRow>)
@@ -127,10 +127,10 @@ function OddsTable({leftTeam, rightTeam, odds}) {
                                     <TableCell component="th" scope="row">
                                         {odd.title}
                                     </TableCell>
-                                    <TableCell align="right">
+                                    <TableCell align="center">
                                         {leftTeamPrice}
                                     </TableCell>
-                                    <TableCell align="right">
+                                    <TableCell align="center">
                                         {rightTeamPrice}
                                     </TableCell>
                                 </TableRow>)

@@ -1,14 +1,12 @@
 import React from 'react'
 import {Link} from 'wouter'
 import {Animated} from "react-animated-css";
-import 'animate.css';
 import './css/HomePage.css'
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import Logo from '../images/sportsdash-high-resolution-logo-black-on-transparent-background.png'
-
 
 const HomePage = () => {
     return (

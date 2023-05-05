@@ -15,12 +15,12 @@ const TeamStatsTable = ({allStats}) => {
         <TableHead>
           <TableRow>
             <TableCell>Stat Type</TableCell>
-            <TableCell align="right">Rank</TableCell>
-            <TableCell align="right">Average Per Game</TableCell>
-            <TableCell align="right">Last 3 Average</TableCell>
-            <TableCell align="right">Last Game</TableCell>
-            <TableCell align="right">Home Average</TableCell>
-            <TableCell align="right">Away Average</TableCell>
+            <TableCell >Rank</TableCell>
+            <TableCell >Average Per Game</TableCell>
+            <TableCell >Last 3 Average</TableCell>
+            <TableCell >Last Game</TableCell>
+            <TableCell >Home Average</TableCell>
+            <TableCell >Away Average</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -39,12 +39,12 @@ const TeamStatsTable = ({allStats}) => {
                 <TableCell component="th" scope="row">
                   {row.stat_type}
                 </TableCell>
-                <TableCell align="right">{row.rank}</TableCell>
-                <TableCell align="right">{row.total_avg}</TableCell>
-                <TableCell align="right">{row.last_three_avg}</TableCell>
-                <TableCell align="right">{row.last_game}</TableCell>
-                <TableCell align="right">{row.home_avg}</TableCell>
-                <TableCell align="right">{row.away_avg}</TableCell>
+                <TableCell align="center">{row.rank}</TableCell>
+                <TableCell align="center">{row.total_avg}</TableCell>
+                <TableCell align="center">{row.last_three_avg}</TableCell>
+                <TableCell align="center">{row.last_game}</TableCell>
+                <TableCell align="center">{row.home_avg}</TableCell>
+                <TableCell align="center">{row.away_avg}</TableCell>
               </TableRow>
           )})}
         </TableBody>

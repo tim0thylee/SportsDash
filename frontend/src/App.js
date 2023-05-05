@@ -2,6 +2,7 @@
 import React, {useState} from 'react'
 import './App.css';
 import Container from '@mui/material/Container';
+import { StyledEngineProvider } from '@mui/material/styles';
 import {Route} from 'wouter'
 
 import Navbar from './components/Navbar'
@@ -17,27 +18,28 @@ function App() {
   const [leftTeam, setLeftTeam] = useState("Charlotte Hornets")
   const [rightTeam, setRightTeam] = useState("Detroit Pistons")
   return (
-    <div className="App" >
-
-      <Container maxWidth={false}>
-        <Navbar 
-          handleLeft={setLeftTeam} 
-          handleRight={setRightTeam}
-        />
-        <Route path="/">
-          <div className="bg_design"></div>
-          <HomePage/>
-        </Route>
-        <Route path ="/matchup">
-          <Dashboard 
-            setLeftTeam={setLeftTeam} 
-            setRightTeam={setRightTeam} 
-            leftTeam={leftTeam} 
-            rightTeam={rightTeam}
+    <StyledEngineProvider injectFirst>
+      <div className="App" >
+        <Container maxWidth={false}>
+          <Navbar 
+            handleLeft={setLeftTeam} 
+            handleRight={setRightTeam}
           />
-        </Route>
-      </Container>
-    </div>
+          <Route path="/">
+            <div className="bg_design"></div>
+            <HomePage/>
+          </Route>
+          <Route path ="/matchup">
+            <Dashboard 
+              setLeftTeam={setLeftTeam} 
+              setRightTeam={setRightTeam} 
+              leftTeam={leftTeam} 
+              rightTeam={rightTeam}
+            />
+          </Route>
+        </Container>
+      </div>
+    </StyledEngineProvider>
   );
 }
 
