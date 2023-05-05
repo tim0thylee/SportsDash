@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import moment from 'moment'
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -25,15 +26,20 @@ const MatchupRecordDisplay = ({leftTeam, rightTeam, teamInfo}) => {
 
     const renderMatches = () => {
         return matches.map((match) => {
-            // we only want to show games that are finished
-            if (match.status.long === "Game Finished") {
+            // we only want to show games that are finished (including overtime)
+            const matchStatus = match.status.long
+            if (matchStatus === "Game Finished" || matchStatus === "After Over Time") {
                 const red = "#ef9a9a"
                 const green = "#c5e1a5"
+                const awayScore = match.scores.away.total
+                const homeScore = match.scores.home.total
                 let leftTeamLabel = ""
                 let rightTeamLabel = ""
                 let awayWon = true
                 let leftColor = green
                 let rightColor = red
+                let leftTeamScore = awayScore
+                let rightTeamScore = homeScore
                 // check to see which side is home and away
                 if (leftTeam === match.teams.away.name) {
                     leftTeamLabel += "A"
@@ -41,6 +47,8 @@ const MatchupRecordDisplay = ({leftTeam, rightTeam, teamInfo}) => {
                 } else {
                     leftTeamLabel += "H"
                     rightTeamLabel += "A"
+                    leftTeamScore = homeScore
+                    rightTeamScore = awayScore
                 }
                 //check to see if home or away won
                 if (match.scores.away.total < match.scores.home.total) {
@@ -68,16 +76,28 @@ const MatchupRecordDisplay = ({leftTeam, rightTeam, teamInfo}) => {
                         rightColor = green
                     }
                 }
-                const dateArray = match.date.split("T")
-                const grabDate = dateArray[0]
+                const matchupDate = moment(match.date).format("MM-DD-YYYY")
                 return (
                     <TableRow
                         key={match.id}
                         sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                        >
-                        <TableCell align="center">{grabDate}</TableCell>
-                        <TableCell align="center" sx={{backgroundColor: leftColor}}>{leftTeamLabel}</TableCell>
-                        <TableCell align="center" sx={{backgroundColor: rightColor}}>{rightTeamLabel}</TableCell>
+                    >
+                        <TableCell align="center">
+                            {matchupDate} 
+                            <p style={{fontSize: '8px'}}>
+                                {match.week}
+                            </p>
+                        </TableCell>
+                        <TableCell align="center" sx={{backgroundColor: leftColor}}>
+                            {leftTeamLabel}
+                            <br/>
+                            {leftTeamScore}
+                        </TableCell>
+                        <TableCell align="center" sx={{backgroundColor: rightColor}}>
+                            {rightTeamLabel}
+                            <br/>
+                            {rightTeamScore}
+                        </TableCell>
                     </TableRow>
                 )
             } else {
@@ -97,6 +117,7 @@ const MatchupRecordDisplay = ({leftTeam, rightTeam, teamInfo}) => {
                                 "H" = home team. 
                                 "L" = lost and background color red.
                                 "W" = win and background color green.
+                                The bottom number represents the total points the team has scored in that game. 
                             `}
 
                 />
