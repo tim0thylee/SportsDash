@@ -3,7 +3,7 @@ import { ODDS_SAMPLE_DATA } from '../api/SampleData'
 import OddsTable from './OddsTable'
 import oddsApi from '../api/odds'
 
-const debug = true
+const debug = false
 
 const OddsDiplay = ({rightTeam, leftTeam}) => {
     const [playsToday, setPlaysToday] = useState({})
@@ -26,7 +26,7 @@ const OddsDiplay = ({rightTeam, leftTeam}) => {
         }
         
         callData().catch(console.error)
-    }, [])
+    }, [rightTeam, leftTeam])
 
     const showOdds = () => {
         // if the selected teams are playing, show the odds. 

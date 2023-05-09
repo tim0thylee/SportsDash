@@ -60,7 +60,7 @@ function ResponsiveAppBar({handleLeft, handleRight}) {
     handleCloseNavMenu()
     setAnchorMatchup(null)
   }
-  console.log(todaysGames)
+
   return (
     <AppBar position="static">
       <Container maxWidth="xl">

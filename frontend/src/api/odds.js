@@ -10,7 +10,6 @@ const oddsApi = async () => {
         }
     })
     
-    console.log("odds", response)
     return response.data
 }
 

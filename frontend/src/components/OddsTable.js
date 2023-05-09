@@ -9,15 +9,21 @@ import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 
 function descendingComparator(a, b, orderBy) {
-    const teamB = b.markets[0].outcomes.find((outcome) => outcome.name === orderBy).price
-    const teamA = a.markets[0].outcomes.find((outcome) => outcome.name === orderBy).price
-    if (teamB < teamA) {
-      return -1;
+   
+    const findB = b.markets[0].outcomes.find((outcome) => outcome.name === orderBy)
+    const findA = a.markets[0].outcomes.find((outcome) => outcome.name === orderBy)
+
+    if (findB && findA) {
+        const teamB = findB.price
+        const teamA = findA.price
+        if (teamB < teamA) {
+            return -1;
+        }
+        if (teamB > teamA) {
+            return 1;
+        }
+        return 0;
     }
-    if (teamB > teamA) {
-      return 1;
-    }
-    return 0;
 }
 
 function getComparator(order, orderBy) {
@@ -28,6 +34,7 @@ function getComparator(order, orderBy) {
 
 const sortedRowInformation = (rowArray, comparator) => {
     const stabilizedRowArray = rowArray.map((el, index) => [el, index])
+
     stabilizedRowArray.sort((a, b) => {
         const order = comparator(a[0], b[0]);
         if (order !== 0) {
@@ -80,8 +87,6 @@ function OddsTable({leftTeam, rightTeam, odds}) {
         })
     }
 
-
-
     return (
         <TableContainer component={Paper}>
             <Table size="small" aria-label="a dense table">
@@ -115,7 +120,7 @@ function OddsTable({leftTeam, rightTeam, odds}) {
                             // below is to show the right odds are shown on the right team. 
                             const firstTeam =  odd.markets[0].outcomes[0]
                             const secondTeam = odd.markets[0].outcomes[1]
-
+                            console.log(firstTeam, secondTeam)
                             const leftTeamPrice = firstTeam.name === leftTeam ? firstTeam.price : secondTeam.price
                             const rightTeamPrice = firstTeam.name === rightTeam ? firstTeam.price : secondTeam.price
                             

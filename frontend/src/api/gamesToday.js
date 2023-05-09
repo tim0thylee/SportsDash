@@ -14,7 +14,7 @@ const gamesToday = async (today) => {
           'X-RapidAPI-Host': 'api-basketball.p.rapidapi.com'
         }
     })
-    console.log(response.data)
+
     return response.data
 }
 
