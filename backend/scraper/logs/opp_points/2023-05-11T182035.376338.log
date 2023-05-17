@@ -1,0 +1,88 @@
+2023-05-11 18:20:35 [scrapy] DEBUG: Crawled (200) <GET https://www.teamrankings.com/robots.txt> (referer: None)
+2023-05-11 18:20:36 [scrapy] DEBUG: Crawled (200) <GET https://www.teamrankings.com/nba/stat/opponent-points-per-game> (referer: None)
+2023-05-11 18:20:36 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/opponent-points-per-game>
+{'stat_type': 'Points', 'rank': '1', 'team_name': 'Cleveland', 'total_avg': '106.5', 'last_three_avg': '102.3', 'last_game': '106.0', 'home_avg': '104.6', 'away_avg': '108.4'}
+2023-05-11 18:20:36 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/opponent-points-per-game>
+{'stat_type': 'Points', 'rank': '2', 'team_name': 'Miami', 'total_avg': '109.7', 'last_three_avg': '99.7', 'last_game': '112.0', 'home_avg': '109.1', 'away_avg': '110.4'}
+2023-05-11 18:20:36 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/opponent-points-per-game>
+{'stat_type': 'Points', 'rank': '3', 'team_name': 'Philadelphia', 'total_avg': '110.2', 'last_three_avg': '110.7', 'last_game': '103.0', 'home_avg': '109.0', 'away_avg': '111.5'}
+2023-05-11 18:20:36 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/opponent-points-per-game>
+{'stat_type': 'Points', 'rank': '4', 'team_name': 'Toronto', 'total_avg': '111.3', 'last_three_avg': '111.7', 'last_game': '109.0', 'home_avg': '109.7', 'away_avg': '113.0'}
+2023-05-11 18:20:36 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/opponent-points-per-game>
+{'stat_type': 'Points', 'rank': '5', 'team_name': 'Boston', 'total_avg': '111.5', 'last_three_avg': '111.0', 'last_game': '115.0', 'home_avg': '110.1', 'away_avg': '113.0'}
+2023-05-11 18:20:36 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/opponent-points-per-game>
+{'stat_type': 'Points', 'rank': '6', 'team_name': 'Chicago', 'total_avg': '111.6', 'last_three_avg': '96.0', 'last_game': '102.0', 'home_avg': '111.2', 'away_avg': '112.1'}
+2023-05-11 18:20:36 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/opponent-points-per-game>
+{'stat_type': 'Points', 'rank': '7', 'team_name': 'New York', 'total_avg': '111.7', 'last_three_avg': '105.7', 'last_game': '103.0', 'home_avg': '111.3', 'away_avg': '112.0'}
+2023-05-11 18:20:36 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/opponent-points-per-game>
+{'stat_type': 'Points', 'rank': '8', 'team_name': 'Denver', 'total_avg': '111.9', 'last_three_avg': '117.3', 'last_game': '102.0', 'home_avg': '108.3', 'away_avg': '115.6'}
+2023-05-11 18:20:36 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/opponent-points-per-game>
+{'stat_type': 'Points', 'rank': '9', 'team_name': 'Phoenix', 'total_avg': '112.0', 'last_three_avg': '118.7', 'last_game': '118.0', 'home_avg': '110.2', 'away_avg': '113.8'}
+2023-05-11 18:20:36 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/opponent-points-per-game>
+{'stat_type': 'Points', 'rank': '10', 'team_name': 'Brooklyn', 'total_avg': '112.1', 'last_three_avg': '98.0', 'last_game': '96.0', 'home_avg': '109.5', 'away_avg': '114.7'}
+2023-05-11 18:20:36 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/opponent-points-per-game>
+{'stat_type': 'Points', 'rank': '11', 'team_name': 'New Orleans', 'total_avg': '112.6', 'last_three_avg': '113.7', 'last_game': '123.0', 'home_avg': '110.2', 'away_avg': '115.0'}
+2023-05-11 18:20:36 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/opponent-points-per-game>
+{'stat_type': 'Points', 'rank': '12', 'team_name': 'Memphis', 'total_avg': '112.9', 'last_three_avg': '113.7', 'last_game': '125.0', 'home_avg': '109.0', 'away_avg': '116.8'}
+2023-05-11 18:20:36 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/opponent-points-per-game>
+{'stat_type': 'Points', 'rank': '13', 'team_name': 'LA Clippers', 'total_avg': '113.6', 'last_three_avg': '125.7', 'last_game': '136.0', 'home_avg': '111.0', 'away_avg': '116.1'}
+2023-05-11 18:20:36 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/opponent-points-per-game>
+{'stat_type': 'Points', 'rank': '14', 'team_name': 'Milwaukee', 'total_avg': '113.9', 'last_three_avg': '122.7', 'last_game': '128.0', 'home_avg': '113.5', 'away_avg': '114.4'}
+2023-05-11 18:20:36 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/opponent-points-per-game>
+{'stat_type': 'Points', 'rank': '15', 'team_name': 'Orlando', 'total_avg': '114.0', 'last_three_avg': '114.0', 'last_game': '123.0', 'home_avg': '114.7', 'away_avg': '113.2'}
+2023-05-11 18:20:36 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/opponent-points-per-game>
+{'stat_type': 'Points', 'rank': '16', 'team_name': 'Dallas', 'total_avg': '114.1', 'last_three_avg': '124.0', 'last_game': '138.0', 'home_avg': '112.7', 'away_avg': '115.6'}
+2023-05-11 18:20:36 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/opponent-points-per-game>
+{'stat_type': 'Points', 'rank': '17', 'team_name': 'Washington', 'total_avg': '114.4', 'last_three_avg': '118.7', 'last_game': '114.0', 'home_avg': '114.6', 'away_avg': '114.1'}
+2023-05-11 18:20:36 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/opponent-points-per-game>
+{'stat_type': 'Points', 'rank': '18', 'team_name': 'Minnesota', 'total_avg': '115.4', 'last_three_avg': '113.3', 'last_game': '112.0', 'home_avg': '114.5', 'away_avg': '116.3'}
+2023-05-11 18:20:36 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/opponent-points-per-game>
+{'stat_type': 'Points', 'rank': '19', 'team_name': 'LA Lakers', 'total_avg': '115.4', 'last_three_avg': '106.3', 'last_game': '121.0', 'home_avg': '112.0', 'away_avg': '118.9'}
+2023-05-11 18:20:36 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/opponent-points-per-game>
+{'stat_type': 'Points', 'rank': '20', 'team_name': 'Okla City', 'total_avg': '116.5', 'last_three_avg': '112.7', 'last_game': '120.0', 'home_avg': '115.6', 'away_avg': '117.2'}
+2023-05-11 18:20:36 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/opponent-points-per-game>
+{'stat_type': 'Points', 'rank': '21', 'team_name': 'Golden State', 'total_avg': '116.5', 'last_three_avg': '112.3', 'last_game': '106.0', 'home_avg': '111.6', 'away_avg': '121.5'}
+2023-05-11 18:20:36 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/opponent-points-per-game>
+{'stat_type': 'Points', 'rank': '22', 'team_name': 'Charlotte', 'total_avg': '117.2', 'last_three_avg': '109.0', 'last_game': '95.0', 'home_avg': '116.1', 'away_avg': '118.2'}
+2023-05-11 18:20:36 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/opponent-points-per-game>
+{'stat_type': 'Points', 'rank': '23', 'team_name': 'Portland', 'total_avg': '117.4', 'last_three_avg': '140.7', 'last_game': '157.0', 'home_avg': '119.3', 'away_avg': '115.5'}
+2023-05-11 18:20:36 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/opponent-points-per-game>
+{'stat_type': 'Points', 'rank': '24', 'team_name': 'Sacramento', 'total_avg': '117.9', 'last_three_avg': '114.0', 'last_game': '120.0', 'home_avg': '119.9', 'away_avg': '115.8'}
+2023-05-11 18:20:36 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/opponent-points-per-game>
+{'stat_type': 'Points', 'rank': '25', 'team_name': 'Utah', 'total_avg': '118.0', 'last_three_avg': '118.7', 'last_game': '128.0', 'home_avg': '116.9', 'away_avg': '119.1'}
+2023-05-11 18:20:36 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/opponent-points-per-game>
+{'stat_type': 'Points', 'rank': '26', 'team_name': 'Atlanta', 'total_avg': '118.2', 'last_three_avg': '124.7', 'last_game': '128.0', 'home_avg': '118.0', 'away_avg': '118.4'}
+2023-05-11 18:20:36 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/opponent-points-per-game>
+{'stat_type': 'Points', 'rank': '27', 'team_name': 'Detroit', 'total_avg': '118.5', 'last_three_avg': '113.7', 'last_game': '103.0', 'home_avg': '118.3', 'away_avg': '118.7'}
+2023-05-11 18:20:36 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/opponent-points-per-game>
+{'stat_type': 'Points', 'rank': '28', 'team_name': 'Houston', 'total_avg': '118.6', 'last_three_avg': '107.0', 'last_game': '109.0', 'home_avg': '115.1', 'away_avg': '122.0'}
+2023-05-11 18:20:36 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/opponent-points-per-game>
+{'stat_type': 'Points', 'rank': '29', 'team_name': 'Indiana', 'total_avg': '119.5', 'last_three_avg': '132.0', 'last_game': '136.0', 'home_avg': '119.7', 'away_avg': '119.2'}
+2023-05-11 18:20:36 [scrapy] DEBUG: Scraped from <200 https://www.teamrankings.com/nba/stat/opponent-points-per-game>
+{'stat_type': 'Points', 'rank': '30', 'team_name': 'San Antonio', 'total_avg': '123.1', 'last_three_avg': '131.7', 'last_game': '117.0', 'home_avg': '120.1', 'away_avg': '125.5'}
+2023-05-11 18:20:36 [scrapy] INFO: Closing spider (finished)
+2023-05-11 18:20:36 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 613,
+ 'downloader/request_count': 2,
+ 'downloader/request_method_count/GET': 2,
+ 'downloader/response_bytes': 66270,
+ 'downloader/response_count': 2,
+ 'downloader/response_status_count/200': 2,
+ 'elapsed_time_seconds': 0.938696,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2023, 5, 12, 1, 20, 36, 324034),
+ 'httpcompression/response_bytes': 249598,
+ 'httpcompression/response_count': 2,
+ 'item_scraped_count': 30,
+ 'log_count/DEBUG': 106,
+ 'log_count/INFO': 25,
+ 'response_received_count': 2,
+ 'robotstxt/request_count': 1,
+ 'robotstxt/response_count': 1,
+ 'robotstxt/response_status_count/200': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2023, 5, 12, 1, 20, 35, 385338)}
+2023-05-11 18:20:36 [scrapy] INFO: Spider closed (finished)
